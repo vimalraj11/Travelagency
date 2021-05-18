@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>filghtlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/flightlist.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    @media only screen and (max-width: 600px){
+        .container-fulid{
+            padding-top: 50px;
+            padding-left:-100px;
+        }
+    }
+  </style>  
+  </head>
+  <body>
+    <header class="navbar">
+        <h2 style="text-align:center;">Choose your destination</h2>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">ORIGIN</label>
+                    <input type="text" class="form-control" id="city" placeholder="chennai" name="city">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">DESTINATION</label>
+                    <input type="text" class="form-control" id="city" placeholder="london" name="city">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">DEPARTDATE</label>
+                    <input type="date" class="form-control" id="date" placeholder="23/05/2021" name="date">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">RETURNDATE</label>
+                    <input type="date" class="form-control" id="date" placeholder="d/m/y" name="date">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="class">PASSENGERCLASS</label>
+                    <input type="text" class="form-control" id="class" placeholder="select your class" name="class">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <br><button type="button" class="btn btn-warning btn-xl">search</button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 style="text-align:center">Filters</h3>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" checked>All tickets</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Best tickets</label>
+                </div>
+                <hr>
+                <div class="form-group" style="width:30%;">
+                    <label for="sel1">SORT</label>
+                    <select class="form-control" id="sel1">
+                        <option>by Price</option>
+                        <option>by Travel time</option>
+                        <option>by Early flight</option>
+                        <option>by Late flight</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">NUMBERS OF STOP
+                            <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>All</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>1 stop</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>2 stops</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-shopping-bag">BAGGAGE</i>
+                            <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>All</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>without baggage</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>baggage and carry on</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plane">AIRLINES</i>
+                            <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>All</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>6F</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Air India</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Blue Air</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Emirates</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Hahn Air</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">ONLINE TRAVEL AGENCY
+                            <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>All</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Bravofly</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>MyHolidays</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Sastiticket</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h1>upcoming flight</h1>
+                <div class=container>
+                    <section class=left>
+                        <p> 23</p>
+                        <p> may</p>
+                    </section>
+                    <section class=right>
+                        <p> Air Asia</p>
+                        <h2> Chennai</h2>
+                        <p class=calendar> sunday 23 may at 08:55pm</p>
+                        <p class=map-pin> Destination LONDON</p>
+                        <a href=#> BOOKING</a>
+                    </section>
+        
+                </div>
+                <div class=container>
+                    <section class=left>
+                        <p> 23</p>
+                        <p> may</p>
+                    </section>
+                    <section class=right>
+                        <p> Blue Air</p>
+                        <h2> Chennai</h2>
+                        <p class=calendar> sunday may at 10.00pm</p>
+                        <p class=map-pin> Destination LONDON</p>
+                        <a href=#> BOOKING</a>
+                    </section>
+        
+                </div>
+                <div class=container>
+                    <section class=left>
+                        <p> 23</p>
+                        <p> may</p>
+                    </section>
+                    <section class=right>
+                        <p> Emirates</p>
+                        <h2> Chennai</h2>
+                        <p class=calendar> sundayday may at 10:35pm</p>
+                        <p class=map-pin> Destination LONDON</p>
+                        <a href=#> BOOKING</a>
+                    </section>
+                </div>
+                <div class=container>
+                    <section class=left>
+                        <p> 23</p>
+                        <p> may</p>
+                    </section>
+                    <section class=right>
+                        <p> Hahn Air</p>
+                        <h2> Chennai</h2>
+                        <p class=calendar> sunday 23 may at 10:55pm</p>
+                        <p class=map-pin> Destination LONDONy</p>
+                        <a href=#> BOOKING</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-sm-3" style="padding:0px 0px 0px 100px">
+                <img src="#" alt="agency image" width="150px" height="250px"> 
+            </div>
+            <div class="col-sm-6">
+                <h2>Contact Us</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Door number,<br>street name,<br>city,<br>district-pincode,<br>state,<br>country.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul style="list-style-type:none;">
+                          <li><span class="fa fa-mobile-phone"> :12345667890</span></li>
+                            <li>E-mail :companygmail.com</li>
+                            <li>Website:company website</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2>Contact Us ON</h2>
+                <hr>
+                <ul style="list-style:none">
+                    <li><i class="fa fa-facebook">  Facebook</i></li>
+                    <li><i class="fa fa-youtube">  Youtube</i></li>
+                    <li><i class="fa fa-twitter">  Twitter</i></li>
+                    <li><i class="fa fa-instagram">  Instagram</i></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="button" style="text-align:center;">
+        <button style="background-color:black"><i class="fa fa-android">   Play Store</i></button>
+        <button style="background-color:black"><i class="fa fa-apple">  Applestore</i></button> 
+        </div>
+        <hr>
+        <h5 style="text-align:center;">Copy Rights @ Tunnel Travels-Year</h5>
+    </div>
+</body>
+</html>

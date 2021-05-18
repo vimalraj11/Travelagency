@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bookingl</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    @media only screen and (max-width: 768px){
+    .navbar-fixed-top{
+        padding-top:0px;
+        padding-bottom:0px;
+    }
+    .navbar-fixed-top .navbar-nav{
+        font-size:20px;
+    }
+    .bg-red{
+        padding-top:220px;
+    }
+    img{
+    width:151px;
+    }
+    @media only screen and (max-width: 600px){
+    .navbar-fixed-top{
+        padding-top:0px;
+        padding-bottom:0px;
+    }
+    .navbar-fixed-top .navbar-nav{
+        font-size:20px;
+    }
+    .bg-red{
+        padding-top:220px;
+        width:100%;
+    }
+    img{
+        width:160px;
+    }
+    .card-deck{
+        width:550px;
+    }
+    }
+  </style>  
+</head>
+<body>
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color:white">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#" style="color:white">Travel</a></li>
+            <li><a href="#" style="color:white">Mobile</a></li>
+            <li><a href="#" style="color:white">City Ride</a></li>
+            <li><a href="#" style="color:white">City Ambasstor</a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#help" style="color:white">HELP</a></li>
+                <li><a href="#sign-in" style="color:white">SIGN IN</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container bg-red">
+        <h2 style="text-align:center;">Choose your destination</h2>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">ORIGIN</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter city" name="city">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">DESTINATION</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter city" name="city">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">DEPARTDATE</label>
+                    <input type="date" class="form-control" id="date" placeholder="d/m/y" name="date">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="city">RETURNDATE</label>
+                    <input type="date" class="form-control" id="date" placeholder="d/m/y" name="date">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form">
+                    <label for="class">PASSENGERCLASS</label>
+                    <input type="text" class="form-control" id="class" placeholder="select your class" name="class">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <br><button type="button" class="btn btn-warning btn-xl"><a href="next2.html">search</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h1 style="text-align:center"><b>Popular Destinations</b></h1>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="img/img1.jpg" width="388px" height="160px" alt="london">
+                <div class="card-body">
+                    <h3 class="card-title"><b>London</b></h3><hr>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img2.jpg" width="388px" height="160px" alt="hong kong">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Hong Kong</b></h3><hr>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img3.jpg" width="388px" height="160px" alt="bangkok">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Bangkok</b></h3><hr>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img4.jpg" width="388px" height="160px" alt="singapore">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Singapore</b></h3><hr>
+                   <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img5.jpg" width="388px" height="160px" alt="neywork">
+                <div class="card-body">
+                    <h3 class="card-title"><b>New York</b></h3><hr>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img6.jpg" width="388px" height="160px" alt="paris">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Paris</b></h3><hr>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Origin</th>
+                                <th style="text-align:right;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left;">Chennai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM8531</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Mumbai</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM4418</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Singapore</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1427</b></p></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">Phuket</td>
+                                <td style="text-align:right;"><p style="color:blue;"><b>RM1094</b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-sm-3" style="padding:0px 0px 0px 100px">
+                <img src="#" alt="agency image" width="150px" height="250px"> 
+            </div>
+            <div class="col-sm-6">
+                <h2>Contact Us</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Door number,<br>street name,<br>city,<br>district-pincode,<br>state,<br>country.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul style="list-style-type:none;">
+                          <li><span class="glyphicon glyphicon-phone"> :12345667890</span></li>
+                            <li>E-mail :companygmail.com</li>
+                            <li>Website:company website</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2>Contact Us ON</h2>
+                <hr>
+                <ul style="list-style:none">
+                    <li><i class="fa fa-facebook">  Facebook</i></li>
+                    <li><i class="fa fa-youtube">  Youtube</i></li>
+                    <li><i class="fa fa-twitter">  Twitter</i></li>
+                    <li><i class="fa fa-instagram">  Instagram</i></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="button" style="text-align:center;">
+        <button style="background-color:black"><i class="fa fa-android">   Play Store</i></button>
+        <button style="background-color:black"><i class="fa fa-apple">  Applestore</i></button> 
+        </div>
+        <hr>
+        <h5 style="text-align:center;">Copy Rights @ Tunnel Travels-Year</h5>
+    </div>
+</body>
+</html>
